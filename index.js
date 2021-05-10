@@ -10,7 +10,7 @@ app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
 app.use(express.static("assets"));
 
-app.get('/',function(req,res){
+app.get('',function(req,res){
     res.send("<h1>HELLO</h1>");
 })
 
