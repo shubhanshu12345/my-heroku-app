@@ -16,7 +16,7 @@
     <form class="addform" method="POST" action="/create-contact" >
       <input type="text" name="name" placeholder="ENTER NAME" required>
       <input type="number" name="phone" placeholder="ENTER NUMBER" required> 
-      <button class="add" style="font-size:.8rem; font-weight: 900; border:none; border-radius: 10px;" type="submit">ADD</button>
+      <button class="add" style="font-size:1rem; font-weight: 900; border:none; border-radius: 10px;" type="submit">ADD</button>
   </form>
   <br>
     <ul>
@@ -27,7 +27,7 @@
       <div class="p2" style="color: rgb(253, 253, 253); font-size: 1.4rem; position:absolute; left: 43rem;  color:black;"><%= contact[i].phone %></div>
       <div class="p2">
         <a href="/delete-contact/?phone<%= contact[i].phone%>">
-        <button><i class="fa fa-times" style="color: red; width: 2vh; height: 2vh; padding:4px; "aria-hidden="true"></i></button>
+        <button><i class="fa fa-times" style="color: red; width: 2vh; height: 2vh; "aria-hidden="true"></i></button>
       </a>
       </div>
     </div>
