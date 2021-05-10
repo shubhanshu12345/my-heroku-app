@@ -23,11 +23,11 @@
       <% for(let i=0;i<contact.length;i++) { %>
    <div class="box">
      <div class="bbx">
-      <div class="p1" style="color:rgb(255, 255, 255); font-weight: 900; font-size: 1.6rem; padding-left: 0.3rem;"><%= contact[i].name %></div>
+      <div class="p1" style="color:rgb(255, 255, 255); font-weight: 900; font-size: 2rem; padding-left: 0.3rem;"><%= contact[i].name %></div>
       <div class="p2" style="color: rgb(253, 253, 253); font-size: 1.4rem; position:absolute; left: 43rem;  color:black;"><%= contact[i].phone %></div>
       <div class="p2">
         <a href="/delete-contact/?phone<%= contact[i].phone%>">
-        <button><i class="fa fa-times" style="color: red; width: 2vh; height: 2vh; "aria-hidden="true"></i></button>
+        <button><i class="fa fa-times" style="color: red; width: 2vh; height: 2vh;  "aria-hidden="true"></i></button>
       </a>
       </div>
     </div>
