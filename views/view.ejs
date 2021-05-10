@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/view.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title><%= head%></title>
+  </head>
+  <body>
+    <h1 style="text-align: center; font-weight: 900; font-size: 3rem;">MY CONTACT LIST</h1>
+    <br>
+    <br>
+    <form class="addform" method="POST" action="/create-contact" >
+      <input type="text" name="name" placeholder="ENTER NAME" required>
+      <input type="number" name="phone" placeholder="ENTER NUMBER" required> 
+      <button class="add" style="font-size:1rem; font-weight: 900;" type="submit">ADD</button>
+  </form>
+  <br>
+    <ul>
+      <% for(let i=0;i<contact.length;i++) { %>
+   <div class="box">
+     <div class="bbx">
+      <div class="p1" style="color:rgb(255, 255, 255); font-size: 2rem; padding-left: 0.3rem;"><%= contact[i].name %></div>
+      <div class="p2" style="color: rgb(253, 253, 253); font-size: 1.4rem; position:absolute; left: 43rem;  color:black;"><%= contact[i].phone %></div>
+      <div class="p2">
+        <a href="/delete-con/?id=<%= contact[i]._id %>&name=<%=  contact[i].name %>">
+        <button><i class="fa fa-times" style="color: red; width: 2vh; height: 2vh; "aria-hidden="true"></i></button>
+      </a>
+      </div>
+    </div>
+      </div>
+      <% } %>
+    </ul>
+
+ 
+  </body>
+</html>

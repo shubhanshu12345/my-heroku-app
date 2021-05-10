@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.addform{
+    display: block;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+}
+.addform input{
+    text-align: center;
+    height: 6vh;
+    width: 30vh;
+}
+input[type="text"]::placeholder { 
+    color: rgb(139, 139, 250);
+}
+input[type="number"]::placeholder { 
+    color: rgb(139, 139, 250);
+}
+.add{
+    color:white;
+    background-color: black;    
+    padding: .5rem;
+}
+.bbx{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 7vh;
+    border:2px solid white;
+    width: 69vh;
+    align-items: center;
+    background-color:rgb(139, 139, 250);
+    flex-direction: row;
+}
