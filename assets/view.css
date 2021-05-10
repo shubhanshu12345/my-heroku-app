@@ -25,7 +25,7 @@ input[type="number"]::placeholder {
 .add{
     color:white;
     background-color: black;    
-    padding: .5rem;
+    padding: .3rem;
 }
 .bbx{
     display: flex;
@@ -35,7 +35,7 @@ input[type="number"]::placeholder {
     margin-right: auto;
     height: 7vh;
     border:2px solid white;
-    width: 69vh;
+    width: 72vh;
     align-items: center;
     background-color:rgb(139, 139, 250);
     flex-direction: row;

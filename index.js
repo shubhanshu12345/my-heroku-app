@@ -10,18 +10,11 @@ app.use(express.static("assets"));
 
 
 var contacts=[
-  {
-    name:'shubhu',
-    phone:'12345698'
-  },
-  {
-    name:'archit',
-    phone:'123446698'
-  }
+ 
 ];
 
 app.get('/',function(req,res){
-  return res.render('view',{'head':'SHUBHU',  // PASSING head and contact in ejs file 
+  return res.render('view',{'head':'CONTACT-LIST',  // PASSING head and contact in ejs file 
   'contact': contacts
 })
 })
@@ -40,14 +33,13 @@ app.post("/create-contact",function(req,res){
 })
 
 
-app.get('/delete-con',function(req,res){
-  console.log(req.query);
+app.get('/delete-contact/',function(req,res){  ///delete-contact/?phone<%= contact[i].phone%>
   let phone=req.query.phone;
-  const contactindex=contacts.findIndex((contact)=>{
+  const contactindex=contacts.findIndex((contact)=>{ //to find the index which is being clicked by the user
     return contact.phone ==phone;
   })
   console.log("phone index:",contactindex);
-  contacts.splice(contactindex,1);
+  contacts.splice(contactindex,1);      // splice is used to remove the content from a particular position and its second parameter takes the no. of elements that we want to remove
  return res.redirect('/');
 })
 
